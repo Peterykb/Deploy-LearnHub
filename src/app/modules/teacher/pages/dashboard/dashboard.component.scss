@@ -1,0 +1,181 @@
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.container-fluid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
+.container-sidebar{
+  width: 0;
+  transition: width .5s ease-in-out;
+}
+
+.navbar{
+  width: 100%;
+}
+
+.container-sidebar.active{
+  opacity: 1;
+  width: 350px;
+}
+
+.container-sidebar.active .sidebar{
+  animation: sidebar 1s;
+}
+
+.container-sidebar:not(.active) .sidebar{
+  animation: outSidebar 1s;
+}
+
+@keyframes outSidebar {
+  0%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes sidebar {
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sidebarAnimation {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  color: #fff;
+}
+
+.sidebar {
+  height: 50%;
+  margin-top: 100px;
+  padding: 0;
+  width: 100%;
+}
+
+.row {
+  height: 100%;
+}
+
+.logo {
+  font-size: 2em;
+}
+
+.navigation-teacher {
+  width: 100%;
+  transition: .3s;
+}
+
+.container-sidebar {
+  padding: 0;
+}
+
+.bar-teacher {
+  margin-right: 40px;
+}
+
+#menu,
+.nav-item {
+  width: 100%;
+}
+
+.nav-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  font-size: 1.2rem;
+}
+
+.nav-item:hover {
+  background-color: #4949499a;
+  color: #ffffff;
+}
+
+.nav-item a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+#menu {
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+}
+
+.dropdown-toggle {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-toggle .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-menu {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu i {
+  font-size: 2em;
+}
+
+.user .img,
+img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+}
+
+.container-xl {
+  height: calc(100% - 100px);
+  padding: 0 30px;
+  position: relative;
+}

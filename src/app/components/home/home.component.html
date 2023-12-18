@@ -1,0 +1,92 @@
+<main class="container">
+
+  <!-- SLIDE BANNERS -->
+  <section class="banners">
+    <div
+      id="carouselExample"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="100"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/assets/images-banner/banner1.png"
+            alt="BANNER DO CURSO DE ANGULAR"
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="https://miro.medium.com/v2/resize:fit:1200/1*ycIMlwgwicqlO6PcFRA-Iw.png" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="https://beecrowd.io/wp-content/uploads/2023/04/WP-Background-3.jpg" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE CURSOS MAIS ACESSADOS DA PLATAFORMA -->
+  <section class="courses-acessed">
+    <div class="title">
+      <h1>Cursos mais Acessados</h1>
+      <hr />
+    </div>
+    <div class="cards-container">
+      <div class="card-course" *ngFor="let course of courses">
+        <div class="card-banner">
+          <p>Banner</p>
+        </div>
+        <div class="card-content">
+          <div class="top">
+            <h1>{{ course.name }}</h1>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="text-description">
+            <p>{{ course.data_criacao }}</p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <small
+            >Valor:
+            <strong>{{ course.preco| currency : "BRL" }}</strong></small
+          >
+          <div class="btn-field">
+            <button routerLink="/course-preview/{{course.name}}">Visualizar Curso</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE CATEGORIAS DE CURSOS -->
+    <section class="categories">
+      <div class="title">
+        <h1>Principais Categorias</h1>
+        <hr />
+      </div>
+      <div class="cards-categories">
+        <div class="card" *ngFor="let category of categories" (click)="navigateToCategoriaCursos(category.id_categoria, category.name)">
+          <div class="card-body">
+            <h1>{{category.name}}</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+</main>
