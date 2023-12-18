@@ -5,7 +5,7 @@ import { AuthUserService } from 'src/app/services/auth-user.service';
 @Component({
   selector: 'app-course-preview',
   templateUrl: './course-preview.component.html',
-  styleUrls: ['./course-preview.component.scss']
+  styleUrls: ['./course-preview.component.scss', './válvula_de_escape.scss']
 })
 export class CoursePreviewComponent {
 
