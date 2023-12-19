@@ -1,0 +1,200 @@
+.box{
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid gray;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 20px;
+  transform: translate(-50%,-50%);
+}
+
+.header-box{
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  padding: 20px;
+}
+
+.content-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.profile-edit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 1em 0;
+}
+
+.profile-img{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #00000085;
+  font-size: 2em;
+  position: relative;
+  cursor: pointer;
+}
+
+.edit-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .6em;
+  border-radius: 49%;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.edit-photo img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile-file{
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgb(91, 0, 238);
+  color: #fff;
+  padding: 5px;
+}
+
+.profile-file span{
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+ .profile-file input[type="file"] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+
+
+.info-user,.field{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.info-user{
+  gap: 15px;
+}
+
+.info-user form{
+  width: 100%;
+}
+
+.field{
+  gap: 10px;
+}
+
+.field input{
+  width: 90%;
+  height: 35px;
+  font-size: 1rem;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1.5px solid #dfdfdf;
+  transition: border .3s ease-in;
+}
+
+.field input:focus{
+  border: 1.5px solid rgb(91, 0, 238);
+  transition: .4s ease-in-out;
+}
+
+.field input:disabled{
+  background-color: rgb(230, 230, 230);
+}
+
+.btn-edit,.btn-logout{
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+}
+
+.btn-edit:hover,.btn-logout:hover{
+  text-decoration: underline;
+}
+
+.buttons-field{
+  width: 100%;
+  margin: 1em 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons-field button{
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  transition: .3s;
+}
+
+.btn-delete{
+  border: 3px solid red;
+  color: red;
+  background: none;
+}
+
+.btn-delete:hover{
+  background-color: red;
+  color: #fff;
+}
+
+.btn-save,.btn-cancel{
+  width: 120px;
+  background: none;
+}
+
+.btn-save{
+  background-color: rgb(91, 0, 238);
+  color: #fff;
+}
+
+.btn-cancel{
+  background-color: #b6b6b6;
+  color: #fff;
+}
+
+.btn-cancel:hover{
+  background-color: #888888;
+}
+
+.btn-save:hover{
+  background-color: rgb(70, 2, 179);
+}

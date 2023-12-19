@@ -1,0 +1,71 @@
+<div class="container-fluid bg-light">
+  <div class="row flex-nowrap">
+    <div class=" bg-dark container-sidebar" [ngClass]="{'active': sidebarOpen}">
+      <div
+      class="d-flex flex-column align-items-center align-items-sm-start text-white sidebar"
+      >
+        <ul
+          class="nav nav-pills flex-column mb-sm-auto mb-0 justify-content-between align-items-center align-items-sm-start"
+          id="menu"
+        >
+          <li class="nav-item" routerLink="./overview">
+            <a>
+              <i class="fa-solid fa-house"></i>
+              <span class="ms-1 d-none d-sm-inline">Home</span>
+            </a>
+          </li>
+          <li class="nav-item" routerLink="./relation-courses">
+            <a>
+              <i class="fa-solid fa-book"></i>
+              <span class="ms-1 d-none d-sm-inline">Meus Cursos</span></a
+            >
+          </li>
+          <li class="nav-item" routerLink="./relation-students">
+            <a>
+              <i class="fa-solid fa-user"></i>
+              <span class="ms-1 d-none d-sm-inline">Alunos</span>
+            </a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+    <div class="navigation-teacher">
+      <nav class="navbar navbar-light bg-dark d-flex justify-content-between">
+        <div class="mobile-menu text-white" (click)="toggleSidebar()"><i class="fa-solid fa-bars" [ngClass]="{'fa-xmark': sidebarOpen}"></i></div>
+        <div class="bar-teacher">
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-light dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <div class="user">
+                <div class="img">
+                  <img
+                    src="https://imagens.brasil.elpais.com/resizer/EZ7f2Fz74pE7Rxg3MfbkbvT2AL4=/980x980/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/6TE7TL7D4YWZFV2TFRSGNGN6JE.jpg"
+                    alt=""
+                  />
+                </div>
+                <span>User</span>
+              </div>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" routerLink="./my-profile"
+                  >Ver perfil</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li (click)="logout()"><a class="dropdown-item">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-xl">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

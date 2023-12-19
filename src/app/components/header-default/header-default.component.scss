@@ -1,0 +1,133 @@
+nav{
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:  0 1px 5px rgb(63,63,63,.4);
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+}
+
+
+.title-header{
+  font-size: 1.7em;
+  margin: 0;
+}
+
+.nav-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul#nav-mobile{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 2em;
+  margin: 0;
+}
+
+ul#nav-mobile li{
+  padding: 6px 10px;
+}
+
+.custom-link{
+  color: #6610f2;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  padding-bottom: 6px;
+}
+
+.custom-link::before{
+  content: '';
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #6610f2;
+  height: 2.5px;
+  border-radius: 10px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.custom-link:hover::before{
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+.user-profile{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-profile:hover .tooltip{
+  visibility: visible;
+}
+
+.search-field{
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-radius: 10px;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.search-field i{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  background-color: #00000057;
+  border-top-left-radius: calc(10px / 2);
+  border-bottom-left-radius: calc(10px / 2);
+  height: 100%;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.search-field input{
+  outline: none;
+  height: 100%;
+  padding: 5px 10px;
+  border: 1px solid #afafaf;
+  border-top-right-radius: 5px;
+  width: 100%;
+  border-bottom-right-radius: 5px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-image: url('https://www.svgrepo.com/download/379010/disc-xmark.svg');
+  background-size: cover;
+  cursor: pointer;
+}

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="title">
+    <h1>Carrinho de Compras</h1>
+  </div>
+  <div class="subtitle">
+    <h4> cursos no carrinho</h4>
+  </div>
+  <div class="courses-container">
+    <div class="course-not" *ngIf="number === 2">
+      <div class="img-not-found">
+        <h1>Não encontrei</h1>
+      </div>
+      <div class="text">
+        <p>Seu carrinho está vazio. Continue comprando para encontrar um curso.</p>
+      </div>
+      <div class="button">
+        <button routerLink="/home">Continue Comprando</button>
+      </div>
+    </div>
+    <div class="your-courses" *ngIf="number === 1">
+      <div class="left">
+        <div class="course" *ngFor="let course of courses">
+          <div class="info-course">
+            <div class="top">
+              <div class="title-course">
+                <h5>{{course.name}}</h5>
+                <h5>De {{course.prof}}</h5>
+              </div>
+              <div class="end-top">
+                <a href="#">Remover</a>
+                <span><i class="fa-solid fa-tag"></i> R$ {{course.preco}},00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="total">
+          <div class="title">
+            <h4>Total:</h4>
+            <div class="price">
+              <h5>R$ 220,00</h5>
+            </div>
+          </div>
+          <button class="btn-finish" routerLink="/buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
